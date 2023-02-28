@@ -6,17 +6,24 @@ has to be delivered in a standard, cross-platform format.
 
 ## Project
 
-Name:
+**Name:** PMD
 
-URL:
+**URL:** https://github.com/pmd/pmd
 
-One or two sentences describing it
+**One or two sentences describing it:** "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth."
+
+
 
 ## Onboarding experience
 
-Did you choose a new project or continue on the previous one?
+**Did you choose a new project or continue on the previous one?**
 
-If you changed the project, how did your experience differ from before?
+We chose a new project since the one we used for assignment 3 was a collection of algorithms, which is not acceptable for this assignment.
+
+**If you changed the project, how did your experience differ from before?**
+
+Unlike the previous project, this project has a very smooth onboarding process. It is not difficult to set up the environment and start working on the project after reading the README file.
+
 
 ## Effort spent
 
