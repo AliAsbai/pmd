@@ -568,4 +568,23 @@ public class UseStringBufferForStringAppendsFP {
             }
         ]]></code>
     </test-code>
+
+    <test-code>
+        <description>reference self inside for loop and outside</description>
+        <expected-problems>1</expected-problems>
+        <expected-linenumbers>3</expected-linenumbers>
+        <code><![CDATA[
+public class Foo {
+    private void bar() {
+        String result = "";
+        for (int i = 0; i < 10; i++) {
+            result = result + i;
+            result += i;
+        }
+        result = result + i;
+        result = result + i;
+    }
+}
+        ]]></code>
+    </test-code>
 </test-data>
