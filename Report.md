@@ -55,6 +55,26 @@ Diffrent programming flaws and issues have diffrent severity levels depending on
 **Scope (functionality and code affected):**  
 Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Title:**  
+
+**URL:**  
+
+**Summary in one or two sentences:**  
+
+**Scope (functionality and code affected):**  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Title:**  
+
+**URL:**  
+
+**Summary in one or two sentences:**  
+
+**Scope (functionality and code affected):**  
+
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
 Optional (point 3): trace tests to requirements.
