@@ -81,7 +81,29 @@ UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStrin
 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
-Optional (point 3): trace tests to requirements.
+**Issue:**  
+https://github.com/pmd/pmd/issues/4327
+
+**Requirements:**
+- The integers 1-5 need to map to three priority levels instead of 5.
+- The rules that are in-place for all the supported languages of PMD need to continue to work without changing them.
+- All hardcoded test rules need to continue to work without changing them (unless it is to improve the test).
+- Operations which should override aspects of rules continue to be tracked correctly.
+- Operations which should not override underlying rules continue to be tracked correctly.
+- Any new code match the codestyle determined by the project.
+- All tests succed and the project builds correctly.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+
+**Requirements:**
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+
+**Requirements:**
 
 ## Code changes
 
