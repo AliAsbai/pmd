@@ -147,9 +147,29 @@ https://github.com/pmd/pmd/issues/4290
 
 ## UML class diagram and its description
 
+![UML Diagram](https://github.com/AliAsbai/pmd/blob/5-write-the-report/uml.png "UML Diagram")
+
+Partial UML diagram over the system, with more detailed focus in the area most affected by issue https://github.com/pmd/pmd/issues/4327.
+
 ### Key changes/classes affected
 
-Optional (point 1): Architectural overview.
+For issue https://github.com/pmd/pmd/issues/4327 most of the work was done in the Rule interface, the RuleReference class and the RulePriority class. Work was also dont in the Abstractrule and AbstractRenderer subclasses which there were too many of to list in the UML diagram. Alot of work was also done in improving and creating new tests for all classes in the pmd-core package.
+
+### Architectural overview
+
+PMD is a static code analysis tool that helps developers improve the quality of their Java code by identifying potential issues, coding violations, and other problems that could impact the performance and maintainability of their applications. The tool works by analyzing the source code of a application and applying a set of predefined rules to the codebase. 
+
+Using PMD can help developers identify and fix issues early in the development process, before they become more costly and time-consuming to address. By improving the quality of their code, developers can also improve the performance, maintainability, and overall reliability of their applications.
+
+The PMD architecture is based on a modular framework that is easily extendible. At its core, the PMD architecture consists of three main components: parsers, a rule module, and a reporting module.
+
+The parsers are responsible for converting source code into an abstract syntax tree (AST) that can be used by the rule module to analyze the code by applying predefined rules that the code is supposed to follow. Because of the projects open-source nature and the modular framework developers can easily create custom parsers to support other languages or frameworks.
+
+The rule module is responsible for applying a set of predefined rules to the AST and flag if any issues are detected. PMD includes a wide range of rules that cover various aspects of code quality, such as complexity, readability, maintainability, and performance. Developers can also create custom rules to meet their specific needs.
+
+Finally, the reporting module is responsible for generating reports on the results of the analysis. PMD supports multiple report formats, including HTML, XML, and CSV.
+
+Since the rule module is one of the core features of the application, our changes had an impact on all other modules of the application. This made it extremely important that we refractored the code in a way that did not change how the rest of the application communicates with the rule module.
 
 Optional (point 2): relation to design pattern(s).
 
