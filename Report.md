@@ -43,13 +43,17 @@ you took care of and where you spent your time, if that time exceeds
 
 ## Overview of issue(s) and work done.
 
-Title:
+**Title:**  
+Reduce priority levels and add confidence value.
 
-URL:
+**URL:**  
+https://github.com/pmd/pmd/issues/4327
 
-Summary in one or two sentences
+**Summary in one or two sentences:**  
+Diffrent programming flaws and issues have diffrent severity levels depending on how deterimental they are to the overall software quality. PMD currently split the severity of the issues into 5 priority levels. But they want to decrease the priority levels to 3. Also they want to assign a confidence level to each reported issue.
 
-Scope (functionality and code affected).
+**Scope (functionality and code affected):**  
+Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
