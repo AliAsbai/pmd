@@ -99,8 +99,12 @@ https://github.com/pmd/pmd/issues/4327
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Issue:**  
+https://github.com/pmd/pmd/issues/4290
 
 **Requirements:**
+- UseStringBufferForStringAppends rule should report on variable declaration instead of on each concatenation.
+- All tests should be passed after modification.
+- New tests should be added to increase the code coverage.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
