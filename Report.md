@@ -58,38 +58,75 @@ Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Title:**  
+Improve UseStringBufferForStringAppends to report on variable declaration.
 
 **URL:**  
+https://github.com/pmd/pmd/issues/4290
 
 **Summary in one or two sentences:**  
+Improve the UseStringBufferForStringAppends rule by making it report on variable declaration instead of on each concatenation.
 
 **Scope (functionality and code affected):**  
+UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStringAppends.xml file.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Title:**  
+Rename rule MethodArgumentCouldBeFinal to FormalParameterCouldBeFinal.
 
 **URL:**  
+https://github.com/pmd/pmd/issues/4287
 
 **Summary in one or two sentences:**  
+Rename the rule class/method to the requested name. Also changed the name of the test class/method for consistency reasons. 
 
 **Scope (functionality and code affected):**  
-
+No major functionality difference. 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
-Optional (point 3): trace tests to requirements.
+**Issue:**  
+https://github.com/pmd/pmd/issues/4327
+
+**Requirements:**
+- The integers 1-5 need to map to three priority levels instead of 5.
+- The rules that are in-place for all the supported languages of PMD need to continue to work without changing them.
+- All hardcoded test rules need to continue to work without changing them (unless it is to improve the test).
+- Operations which should override aspects of rules continue to be tracked correctly.
+- Operations which should not override underlying rules continue to be tracked correctly.
+- Any new code match the codestyle determined by the project.
+- All tests succed and the project builds correctly.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+https://github.com/pmd/pmd/issues/4290
+
+**Requirements:**
+- UseStringBufferForStringAppends rule should report on variable declaration instead of on each concatenation.
+- All tests should be passed after modification.
+- New tests should be added to increase the code coverage.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+
+**Requirements:**
 
 ## Code changes
 
 ### Patch
 
-(copy your changes or the add git command to show them)
+**Issue:**  
+https://github.com/pmd/pmd/issues/4327
 
-git diff ...
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/10/commits
 
-Optional (point 4): the patch is clean.
+**Issue:**  
+https://github.com/pmd/pmd/issues/4290
 
-Optional (point 5): considered for acceptance (passes all automated checks).
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/8/commits
 
 ## Test results
 
