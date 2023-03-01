@@ -6,37 +6,36 @@ has to be delivered in a standard, cross-platform format.
 
 ## Project
 
-Name:
+**Name:** PMD
 
-URL:
+**URL:** https://github.com/pmd/pmd
 
-One or two sentences describing it
+**One or two sentences describing it:** "PMD is a source code analyzer. It finds common programming flaws like unused variables, empty catch blocks, unnecessary object creation, and so forth."
+
+
 
 ## Onboarding experience
 
-Did you choose a new project or continue on the previous one?
+**Did you choose a new project or continue on the previous one?**
 
-If you changed the project, how did your experience differ from before?
+We chose a new project since the one we used for assignment 3 was a collection of algorithms, which is not acceptable for this assignment.
+
+**If you changed the project, how did your experience differ from before?**
+
+Unlike the previous project, this project has a very smooth onboarding process. It is not difficult to set up the environment and start working on the project after reading the README file.
+
 
 ## Effort spent
 
-For each team member, how much time was spent in
+For each team member, how much time was spent:
 
-1. plenary discussions/meetings;
-
-2. discussions within parts of the group;
-
-3. reading documentation;
-
-4. configuration and setup;
-
-5. analyzing code/output;
-
-6. writing documentation;
-
-7. writing code;
-
-8. running code?
+| Team member | Plenary discussions/meetings | Discussions within parts of the group | Reading documentation | Configuration and setup | Analyzing code/output | Writing documentation | writing code | running code | Total |
+| ------------- | ---------------------------- | ---------------------------------- | ------------------ | -------------------- | ------------------- | --------------- | --------------- | ----------- | ----- |
+| Ouday Ahmed |  |  |  |  |  |  |  |  |  |
+| Martin Arenbro |  |  |  |  |  |  |  |  |  |
+| Ali Asbai |  |  |  |  |  |  |  |  |  |
+| David Ljunggren |  |  |  |  |  |  |  |  |  |
+| Christofer Vikström |  |  |  |  |  |  |  |  |  |
 
 For setting up tools and libraries (step 4), enumerate all dependencies
 you took care of and where you spent your time, if that time exceeds
@@ -44,13 +43,37 @@ you took care of and where you spent your time, if that time exceeds
 
 ## Overview of issue(s) and work done.
 
-Title:
+**Title:**  
+Reduce priority levels and add confidence value.
 
-URL:
+**URL:**  
+https://github.com/pmd/pmd/issues/4327
 
-Summary in one or two sentences
+**Summary in one or two sentences:**  
+Diffrent programming flaws and issues have diffrent severity levels depending on how deterimental they are to the overall software quality. PMD currently split the severity of the issues into 5 priority levels. But they want to decrease the priority levels to 3. Also they want to assign a confidence level to each reported issue.
 
-Scope (functionality and code affected).
+**Scope (functionality and code affected):**  
+Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Title:**  
+
+**URL:**  
+
+**Summary in one or two sentences:**  
+
+**Scope (functionality and code affected):**  
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Title:**  
+
+**URL:**  
+
+**Summary in one or two sentences:**  
+
+**Scope (functionality and code affected):**  
 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
