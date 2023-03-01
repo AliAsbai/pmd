@@ -115,6 +115,11 @@ https://github.com/pmd/pmd/issues/4327
 **Patch:**
 https://github.com/AliAsbai/pmd/pull/10/commits
 
+**Issue:**  
+https://github.com/pmd/pmd/issues/4290
+
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/8/commits
 
 ## Test results
 
