@@ -130,8 +130,20 @@ https://github.com/AliAsbai/pmd/pull/8/commits
 
 ## Test results
 
-Overall results with link to a copy or excerpt of the logs (before/after
-refactoring).
+To see the test results, you can access it by navigating to the following path in the web browser:
+
+**Issue:**  
+https://github.com/pmd/pmd/issues/4290
+
+**Before refactoring:**
+	
+	test-results/Test Results - UseStringBufferForStringAppendsTestBefore.html
+
+**After refactoring:**
+
+	test-results/Test Results - UseStringBufferForStringAppendsTestAfter.html
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## UML class diagram and its description
 
