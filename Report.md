@@ -109,13 +109,12 @@ https://github.com/pmd/pmd/issues/4327
 
 ### Patch
 
-(copy your changes or the add git command to show them)
+**Issue:**  
+https://github.com/pmd/pmd/issues/4327
 
-git diff ...
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/10/commits
 
-Optional (point 4): the patch is clean.
-
-Optional (point 5): considered for acceptance (passes all automated checks).
 
 ## Test results
 
