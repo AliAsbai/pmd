@@ -6,6 +6,6 @@ package net.sourceforge.pmd.lang.java.rule.codestyle;
 
 import net.sourceforge.pmd.testframework.PmdRuleTst;
 
-public class MethodArgumentCouldBeFinalTest extends PmdRuleTst {
+public class FormalParameterCouldBeFinalTest extends PmdRuleTst {
     // no additional unit tests
 }

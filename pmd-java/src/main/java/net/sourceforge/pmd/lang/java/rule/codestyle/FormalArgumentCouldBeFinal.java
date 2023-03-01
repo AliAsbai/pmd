@@ -16,9 +16,9 @@ import net.sourceforge.pmd.lang.java.symboltable.VariableNameDeclaration;
 import net.sourceforge.pmd.lang.symboltable.NameOccurrence;
 import net.sourceforge.pmd.lang.symboltable.Scope;
 
-public class MethodArgumentCouldBeFinalRule extends AbstractOptimizationRule {
+public class FormalArgumentCouldBeFinal extends AbstractOptimizationRule {
 
-    public MethodArgumentCouldBeFinalRule() {
+    public FormalArgumentCouldBeFinal() {
         addRuleChainVisit(ASTConstructorDeclaration.class);
         addRuleChainVisit(ASTMethodDeclaration.class);
     }
