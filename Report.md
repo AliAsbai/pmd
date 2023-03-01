@@ -72,13 +72,16 @@ UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStrin
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Title:**  
+Rename rule MethodArgumentCouldBeFinal to FormalParameterCouldBeFinal.
 
 **URL:**  
+https://github.com/pmd/pmd/issues/4287
 
 **Summary in one or two sentences:**  
+Rename the rule class/method to the requested name. Also changed the name of the test class/method for consistency reasons. 
 
 **Scope (functionality and code affected):**  
-
+No major functionality difference. 
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
 **Issue:**  
