@@ -122,6 +122,8 @@ https://github.com/pmd/pmd/issues/4327
 **Patch:**
 https://github.com/AliAsbai/pmd/pull/10/commits
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 **Issue:**  
 https://github.com/pmd/pmd/issues/4290
 
@@ -133,6 +135,19 @@ https://github.com/AliAsbai/pmd/pull/8/commits
 To see the test results, you can access it by navigating to the following path in the web browser:
 
 **Issue:**  
+https://github.com/pmd/pmd/issues/4327
+
+**Before refactoring:**
+	
+	test-results/Test Results - All_in_pmd-core_Before.html
+
+**After refactoring:**
+
+	test-results/Test Results - All_in_pmd-core_After.html
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
 https://github.com/pmd/pmd/issues/4290
 
 **Before refactoring:**
@@ -142,8 +157,6 @@ https://github.com/pmd/pmd/issues/4290
 **After refactoring:**
 
 	test-results/Test Results - UseStringBufferForStringAppendsTestAfter.html
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## UML class diagram and its description
 
