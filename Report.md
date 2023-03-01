@@ -58,12 +58,16 @@ Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Title:**  
+Improve UseStringBufferForStringAppends to report on variable declaration.
 
 **URL:**  
+https://github.com/pmd/pmd/issues/4290
 
 **Summary in one or two sentences:**  
+Improve the UseStringBufferForStringAppends rule by making it report on variable declaration instead of on each concatenation.
 
 **Scope (functionality and code affected):**  
+UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStringAppends.xml file.
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
