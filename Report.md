@@ -27,23 +27,15 @@ Unlike the previous project, this project has a very smooth onboarding process. 
 
 ## Effort spent
 
-For each team member, how much time was spent in
+For each team member, how much time was spent:
 
-1. plenary discussions/meetings;
-
-2. discussions within parts of the group;
-
-3. reading documentation;
-
-4. configuration and setup;
-
-5. analyzing code/output;
-
-6. writing documentation;
-
-7. writing code;
-
-8. running code?
+| Team member | Plenary discussions/meetings | Discussions within parts of the group | Reading documentation | Configuration and setup | Analyzing code/output | Writing documentation | writing code | running code | Total |
+| ------------- | ---------------------------- | ---------------------------------- | ------------------ | -------------------- | ------------------- | --------------- | --------------- | ----------- | ----- |
+| Ouday Ahmed |  |  |  |  |  |  |  |  |  |
+| Martin Arenbro |  |  |  |  |  |  |  |  |  |
+| Ali Asbai |  |  |  |  |  |  |  |  |  |
+| David Ljunggren |  |  |  |  |  |  |  |  |  |
+| Christofer Vikström |  |  |  |  |  |  |  |  |  |
 
 For setting up tools and libraries (step 4), enumerate all dependencies
 you took care of and where you spent your time, if that time exceeds
