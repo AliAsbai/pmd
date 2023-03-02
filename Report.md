@@ -34,7 +34,7 @@ For each team member, how much time was spent:
 | Ouday Ahmed |  |  |  |  |  |  |  |  |  |
 | Martin Arenbro |  |  |  |  |  |  |  |  |  |
 | Ali Asbai |  |  | 4 h | 45 m | 6 h | 4 h | 3 h | 2 h | 20 h |
-| David Ljunggren |  |  |  |  |  |  |  |  |  |
+| David Ljunggren | 1h | 1h | 8h | 1h | 6h | 5h | 1h | 1h | 24h |
 | Christofer Vikström | 1h | 1h | 6h | 30m | 6h | 4h | 1h | 30m | 20h |
 
 For setting up tools and libraries (step 4), enumerate all dependencies
