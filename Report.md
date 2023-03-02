@@ -60,7 +60,7 @@ Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 **Title:**  
 Improve UseStringBufferForStringAppends to report on variable declaration.
 
-**URL:**  
+**URL:** 
 https://github.com/pmd/pmd/issues/4290
 
 **Summary in one or two sentences:**  
@@ -82,19 +82,39 @@ Rename the rule class/method to the requested name. Also changed the name of the
 
 **Scope (functionality and code affected):**  
 No major functionality difference. 
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Title:**  
+Complete ConstantsInInterface hint to alternative location in enum.
+
+**URL:**  
+https://github.com/pmd/pmd/issues/1205
+
+**Summary in one or two sentences:**  
+Made changes to an error message, and to the PMD wiki. 
+
+**Scope (functionality and code affected):**  
+No major functionality difference. 
+
+
+
 ## Requirements for the new feature or requirements affected by functionality being refactored
 
 **Issue:**  
 https://github.com/pmd/pmd/issues/4327
 
 **Requirements:**
-- The integers 1-5 need to map to three priority levels instead of 5.
-- The rules that are in-place for all the supported languages of PMD need to continue to work without changing them.
-- All hardcoded test rules need to continue to work without changing them (unless it is to improve the test).
-- Operations which should override aspects of rules continue to be tracked correctly.
-- Operations which should not override underlying rules continue to be tracked correctly.
-- Any new code match the codestyle determined by the project.
-- All tests succed and the project builds correctly.
+| ID | Title | Description |
+|---|---|---|
+| 1 | Feature | The integers 1-5 need to map to three priority levels instead of 5. |
+| 2 | Regression Testing | The rules that are in-place for all the supported languages need to continue working. |
+| 3 | Regression Testing | All hardcoded tests must work without changing them |
+| 4 | Regression Testing | Operations which should override aspects of rules continue to be tracked correctly. |
+| 5 | Regression Testing | Operations which should not override underlying rules continue to be tracked correctly. |
+| 6 | Coding Conventions | Any new code match the codestyle determined by the project. |
+| 7 | Regression Testing | All tests succed and the project builds correctly. |
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -102,15 +122,33 @@ https://github.com/pmd/pmd/issues/4327
 https://github.com/pmd/pmd/issues/4290
 
 **Requirements:**
-- UseStringBufferForStringAppends rule should report on variable declaration instead of on each concatenation.
-- All tests should be passed after modification.
-- New tests should be added to increase the code coverage.
+| ID | Title | Description |
+|---|---|---|
+| 1 | Feature | UseStringBufferForStringAppends rule should report on variable declaration instead of on each concatenation. |
+| 2 | Regression Testing | All tests should be passed after modification. |
+| 3 | Coverage | New tests should be added to increase the code coverage. |
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Issue:**  
+https://github.com/pmd/pmd/issues/4287
 
-**Requirements:**
+
+| ID | Title | Description |
+|---|---|---|
+| 1 | Refactoring | Rename the rule class/method to the requested name. |
+| 2 | Refactoring | Change the name of the test class/method for consistency. |
+| 3 | Regression Testing | The regression tests should pass after modification. |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+https://github.com/pmd/pmd/issues/1205
+
+| ID | Title | Description |
+|---|---|---|
+| 1 | Feature | The error message should be short and not be phrased as "Avoid ...". |
+| 2 | Documentation | The Wiki should have a more detailed description which refers the programmer to the appropriate item in Effective Java. |
+| 3 | Regression Testing | The regression tests should pass after modification. |
 
 ## Code changes
 
@@ -129,6 +167,25 @@ https://github.com/pmd/pmd/issues/4290
 
 **Patch:**
 https://github.com/AliAsbai/pmd/pull/8/commits
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+https://github.com/pmd/pmd/issues/4287
+
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/12/commits
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Issue:**  
+https://github.com/pmd/pmd/issues/1205
+
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/9/commits
+
+
+
 
 ## Test results
 
