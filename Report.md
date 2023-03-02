@@ -192,6 +192,12 @@ What are your main take-aways from this project? What did you learn?
 
 How did you grow as a team, using the Essence standard to evaluate yourself?
 
-Optional (point 6): How would you put your work in context with best software engineering practice?
+**Optional (point 6): How would you put your work in context with best software engineering practice?**
+
+We think it makes sense to mention the alpha "Work" from the kernel. A big setback for us was that we were stuck on step 2 (prepared) and 3 (started) for too long, which resulted in much less time for actual development. We were stuck on step 2 due to not finding suitable projects that everyone wanted to work on. At one point, we actually thought we had found a good project, but it turned out that it did not quite meet the assignments criteria, so after consulting with TAs and the examiner, we decided to switch projects a week before the deadline. Needless to say, it took quite some time to find a project that met all our requirements. On top of all the requirements set by the assignment itself, not only did we want the codebase to be in Java, but we also wanted the product to be something that we would consider using, because we find it hard to work on stuff that we do not care for. 
+
+When we had decided on the PMD project, it took quite a long time before we considered the work to go "well" (step 4), and we were thus stuck on step 3. Finding issues that we could resolve given the limited time, while also not being too trivial, was not easy. At this stage, we realized that the majority of our time would go to reading documentation and analyzing code. We also realized that it does not always make sense to collaborate on issues, because it is sometimes difficult to subdivide issues into smaller tasks, which often leads to duplicating work and effort. We think the requirements system is a great way of making it easier to collaborate on issues, however, and we think we managed to use this system rather neatly.
+
+We have also come to the conclusion that the Opportunity / Stakeholder alphas play a large role for the developers as well. Reason being, we feel like it is quite difficult to maintain the motivation needed to develop and contribute towards open source projects without having a clear background of the bigger picture. Just solving a bug for a project which perhaps will not live to see itself being deployed is rather demotivating. 
 
 Optional (point 7): Is there something special you want to mention here?
