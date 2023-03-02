@@ -182,6 +182,9 @@ https://github.com/AliAsbai/pmd/pull/12/commits
 https://github.com/pmd/pmd/issues/1205
 
 **Patch:**
+
+_[This patch has been accepted, or at least been considered for acceptance by the project.](https://github.com/pmd/pmd/pull/4412)_
+
 https://github.com/AliAsbai/pmd/pull/9/commits
 
 
