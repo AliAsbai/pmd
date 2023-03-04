@@ -69,13 +69,36 @@ Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 
 ### Code changes
 
-**Patch:**
-https://github.com/AliAsbai/pmd/pull/10/commits
+**Patch:** https://github.com/AliAsbai/pmd/pull/10/commits/0beac2168fb9c2b967a76abfa3d1e48a73dc5bcc  
+First we removed the priority level between high and medium called medium_high. We acomplished this by changing the index 2 that was previously mapped to medium_high and made it map to medium instead. The index 3 that was mapped to medium preiously mapped to nothing for the time being. We replaced all cases of prioritty level medium_high in tests with either medium or high depending on what was best in each context. We also changed all instances of priority level 3 (old medium) with priority level 2 (new medium, old medium_high).
+
+**Patch:** https://github.com/AliAsbai/pmd/pull/10/commits/1145f9b23404d5cc0c460f33b6fb9e88a5dbd127  
+Secondly we removed the priority level between medium and low called medium_low. We acomplished this by changing the index 5 that was previously mapped to low and made it map to nothing instead. The index 3 was mapped to low instead. We replaced all cases of prioritty level medium_low in tests with either medium or high depending on what was best in each context. We also changed all instances of priority level 5 (old low) with priority level 3 (new low).
+
+**Patch:** https://github.com/AliAsbai/pmd/pull/10/commits/b19848610fc47e966a9790fce9a8c35b5ee522a1  
+We now modified the validation process of priority levels to only accept priority levels in the range 1-3 instead of 1-5.
+
+**Patch:** https://github.com/AliAsbai/pmd/pull/10/commits/f2abc2b403258526ff2f621f20223136a47ef590  
+Then we added some new tests that check that priority levels are validated corrctly in the right range and that each priority level is mapped to the correct index.
+
+**Patch:** https://github.com/AliAsbai/pmd/pull/10/commits/605a82e2f15eeb14b7a1a01b89f9f64b434af10c  
+The solution as it stood passed all tests old and new. But are over 20 packackges in the project for diffrent programmming languages each containing thousands of rules that were currently using the old indexes 1-5 for their priorirty levels. All of these would no longer work if our solution were commited to the main project. So this had to be fixed, since the rules are so many we saw it as virtually impossible to go through them all and change their values to comply with the new solution. Therefore we altered the solution. The priority levels medium and low now mapped to their old indexes 3 and 5 respectively. But now the indexes for the old priority levels medium_high and medium_low were alos mapped to priority levels medium and low respectively. So now index 1 mapped to priority level high, indexes 2 and 3 mapped to priority level medium and indexes 4 and 5 mapped to priority level low. Alot of tests had to be reverted to their old values before there were any changes and the validation process of priority levels was reverted to accept indexes 1-5 again. Now all the indexes mapped to 3 priority levels and all the tests were successful while all old rules continued to work as expected. We were done!
+
+If you want to see the full timeline and changes of this issue you can find that in the issue tracker at https://github.com/AliAsbai/pmd/pull/10/commits
 
 ### Test results
 
+These test results are from the file PMDPParametersTest.java, this file is responsible for testing what values constitute a valid priority level and what indexes map to which priority levels.
 
-To see the test results, you can access it by navigating to the following path in the web browser:
+**Before**:  
+![Tests Before](https://i.imgur.com/XBRR1Ui.png "Tests before refactoring")
+
+We added some test that check that the valid range for priority level indexes are 1-5. We also added tests that check that each index 1-5 is mapped to the correct priority level.
+
+**After:**  
+![Tests After](https://i.imgur.com/sNlyv9Q.png "Tests after refactoring")
+
+To see the full test results, you can access it by navigating to the following path in the web browser:
 
 **Before refactoring:**
 	
