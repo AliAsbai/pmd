@@ -41,7 +41,7 @@ For setting up tools and libraries (step 4), enumerate all dependencies
 you took care of and where you spent your time, if that time exceeds
 30 minutes.
 
-## Overview of issue(s) and work done.
+## Overview of issue 1
 
 **Title:**  
 Reduce priority levels and add confidence value.
@@ -55,7 +55,37 @@ Diffrent programming flaws and issues have diffrent severity levels depending on
 **Scope (functionality and code affected):**  
 Almost all files in the pmd-core folder aswell as 2 files in pmd-doc.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Requirements for the new feature or requirements affected by functionality being refactored
+
+| ID | Title | Description |
+|---|---|---|
+| 1 | Feature | The integers 1-5 need to map to three priority levels instead of 5. |
+| 2 | Regression Testing | The rules that are in-place for all the supported languages need to continue working. |
+| 3 | Regression Testing | All hardcoded tests must work without changing them |
+| 4 | Regression Testing | Operations which should override aspects of rules continue to be tracked correctly. |
+| 5 | Regression Testing | Operations which should not override underlying rules continue to be tracked correctly. |
+| 6 | Coding Conventions | Any new code match the codestyle determined by the project. |
+| 7 | Regression Testing | All tests succed and the project builds correctly. |
+
+### Code changes
+
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/10/commits
+
+### Test results
+
+
+To see the test results, you can access it by navigating to the following path in the web browser:
+
+**Before refactoring:**
+	
+	test-results/Test Results - All_in_pmd-core_Before.html
+
+**After refactoring:**
+
+	test-results/Test Results - All_in_pmd-core_After.html
+
+## Overview of issue 2
 
 **Title:**  
 Improve UseStringBufferForStringAppends to report on variable declaration.
@@ -69,7 +99,32 @@ Improve the UseStringBufferForStringAppends rule by making it report on variable
 **Scope (functionality and code affected):**  
 UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStringAppends.xml file.
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Requirements for the new feature or requirements affected by functionality being refactored
+
+| ID | Title | Description |
+|---|---|---|
+| 1 | Feature | UseStringBufferForStringAppends rule should report on variable declaration instead of on each concatenation. |
+| 2 | Regression Testing | All tests should be passed after modification. |
+| 3 | Coverage | New tests should be added to increase the code coverage. |
+
+### Code changes
+
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/8/commits
+
+### Test results
+
+To see the test results, you can access it by navigating to the following path in the web browser:
+
+**Before refactoring:**
+	
+	test-results/Test Results - UseStringBufferForStringAppendsTestBefore.html
+
+**After refactoring:**
+
+	test-results/Test Results - UseStringBufferForStringAppendsTestAfter.html
+
+## Overview of issue 3
 
 **Title:**  
 Rename rule MethodArgumentCouldBeFinal to FormalParameterCouldBeFinal.
@@ -83,7 +138,22 @@ Rename the rule class/method to the requested name. Also changed the name of the
 **Scope (functionality and code affected):**  
 No major functionality difference. 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Requirements for the new feature or requirements affected by functionality being refactored
+
+| ID | Title | Description |
+|---|---|---|
+| 1 | Refactoring | Rename the rule class/method to the requested name. |
+| 2 | Refactoring | Change the name of the test class/method for consistency. |
+| 3 | Regression Testing | The regression tests should pass after modification. |
+
+### Code changes
+
+**Patch:**
+https://github.com/AliAsbai/pmd/pull/12/commits
+
+### Test results
+
+## Overview of issue 4
 
 **Title:**  
 Complete ConstantsInInterface hint to alternative location in enum.
@@ -97,52 +167,7 @@ Made changes to an error message, and to the PMD wiki.
 **Scope (functionality and code affected):**  
 No major functionality difference. 
 
-
-
-## Requirements for the new feature or requirements affected by functionality being refactored
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4327
-
-**Requirements:**
-| ID | Title | Description |
-|---|---|---|
-| 1 | Feature | The integers 1-5 need to map to three priority levels instead of 5. |
-| 2 | Regression Testing | The rules that are in-place for all the supported languages need to continue working. |
-| 3 | Regression Testing | All hardcoded tests must work without changing them |
-| 4 | Regression Testing | Operations which should override aspects of rules continue to be tracked correctly. |
-| 5 | Regression Testing | Operations which should not override underlying rules continue to be tracked correctly. |
-| 6 | Coding Conventions | Any new code match the codestyle determined by the project. |
-| 7 | Regression Testing | All tests succed and the project builds correctly. |
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4290
-
-**Requirements:**
-| ID | Title | Description |
-|---|---|---|
-| 1 | Feature | UseStringBufferForStringAppends rule should report on variable declaration instead of on each concatenation. |
-| 2 | Regression Testing | All tests should be passed after modification. |
-| 3 | Coverage | New tests should be added to increase the code coverage. |
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4287
-
-
-| ID | Title | Description |
-|---|---|---|
-| 1 | Refactoring | Rename the rule class/method to the requested name. |
-| 2 | Refactoring | Change the name of the test class/method for consistency. |
-| 3 | Regression Testing | The regression tests should pass after modification. |
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/1205
+### Requirements for the new feature or requirements affected by functionality being refactored
 
 | ID | Title | Description |
 |---|---|---|
@@ -150,73 +175,13 @@ https://github.com/pmd/pmd/issues/1205
 | 2 | Documentation | The Wiki should have a more detailed description which refers the programmer to the appropriate item in Effective Java. |
 | 3 | Regression Testing | The regression tests should pass after modification. |
 
-## Code changes
-
-### Patch
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4327
-
-**Patch:**
-https://github.com/AliAsbai/pmd/pull/10/commits
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4290
-
-**Patch:**
-https://github.com/AliAsbai/pmd/pull/8/commits
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4287
-
-**Patch:**
-https://github.com/AliAsbai/pmd/pull/12/commits
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/1205
-
 **Patch:**
 
 _[This patch has been accepted, or at least been considered for acceptance by the project.](https://github.com/pmd/pmd/pull/4412)_
 
 https://github.com/AliAsbai/pmd/pull/9/commits
 
-
-
-
-## Test results
-
-To see the test results, you can access it by navigating to the following path in the web browser:
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4327
-
-**Before refactoring:**
-	
-	test-results/Test Results - All_in_pmd-core_Before.html
-
-**After refactoring:**
-
-	test-results/Test Results - All_in_pmd-core_After.html
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-**Issue:**  
-https://github.com/pmd/pmd/issues/4290
-
-**Before refactoring:**
-	
-	test-results/Test Results - UseStringBufferForStringAppendsTestBefore.html
-
-**After refactoring:**
-
-	test-results/Test Results - UseStringBufferForStringAppendsTestAfter.html
+### Test results
 
 ## UML class diagram and its description
 
