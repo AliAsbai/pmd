@@ -133,7 +133,18 @@ UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStrin
 ### Code changes
 
 **Patch:**
-https://github.com/AliAsbai/pmd/pull/8/commits
+**Patch:** https://github.com/AliAsbai/pmd/pull/8/commits/c6d22ed767b321ada0dc1ed3a189f63e40d31727  
+To make the UseStringBufferForStringAppends rule report on variable declaration instead of on each concatenation we started by modifying the visit method which is inside the UseStringBufferForStringAppendsRule class that is responsible to check if there is a string appended without using StringBuilder or StringBuffer. The visit method is reporting on each concatenation. To make it report only on variable declaration we added a new boolean value to check if there is a string appended without using StringBuilder or StringBuffer. We removed also the reporting on each string concatenation instead of that we made the boolean value true. Finally, we added an if statement before the visit method returning to check if the boolean value is true to add a violation on the variable declaration.
+
+
+**Patch:** https://github.com/AliAsbai/pmd/pull/8/commits/4ac09ab2b190c20ee2b96f8c54fb8d45892cbbff  
+Because the new changes were made on UseStringBufferForStringAppendsRule class there were 10 tests affected by the new changes. Therefore, we modified them and made them suitable for the new changes.
+
+
+**Patch:** https://github.com/AliAsbai/pmd/pull/8/commits/703edf169b689f3923ed8473f2c286c7630539ab  
+After that, we measured the code coverage for the UseStringBufferForStringAppendsRule class and it was 77%. Therefore, we added a new test which increase the code coverage to 81%. The test checks for the presence of two string append without using StringBuilder or StringBuffer, one of them is inside the for loop and the other one outside it.
+
+If you want to see the full timeline and changes of this issue you can find that in the issue tracker at https://github.com/AliAsbai/pmd/pull/8/commits
 
 ### Test results
 
