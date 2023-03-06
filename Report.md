@@ -117,7 +117,7 @@ Improve UseStringBufferForStringAppends to report on variable declaration.
 https://github.com/pmd/pmd/issues/4290
 
 **Summary in one or two sentences:**  
-Improve the UseStringBufferForStringAppends rule by making it report on variable declaration instead of on each concatenation.
+For every language supported by pmd, there is a set of rules that are checked on the source code that will be analyzed. One of these rules related to this issue is the UseStringBufferForStringAppends rule which is mainly based on checking if the java code has a string append without using StringBuilder or StringBuffer. If this is found, the rule will report each concatenation. The issue relates to modifying and improving the UseStringBufferForStringAppends rule by making it report on variable declaration instead of on each concatenation.
 
 **Scope (functionality and code affected):**  
 UseStringBufferForStringAppendsRule class and test data: UseStringBufferForStringAppends.xml file.
