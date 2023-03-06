@@ -148,6 +148,16 @@ If you want to see the full timeline and changes of this issue you can find that
 
 ### Test results
 
+These are test results for UseStringBufferForStringAppendsTest before/after refactoring.
+
+**Before**:  
+![Test Results - UseStringBufferForStringAppendsTestBefore](https://user-images.githubusercontent.com/66073097/223131551-5de940e9-baeb-42e5-a138-c66b7c4b1524.jpg)
+
+**After:**  
+![Test Results - UseStringBufferForStringAppendsTestAfter](https://user-images.githubusercontent.com/66073097/223131822-502ebb57-9585-4cf1-80a3-3578661d1796.jpg)
+
+
+
 To see the test results, you can access it by navigating to the following path in the web browser:
 
 **Before refactoring:**
