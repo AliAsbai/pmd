@@ -31,7 +31,7 @@ For each team member, how much time was spent:
 
 | Team member | Plenary discussions/meetings | Discussions within parts of the group | Reading documentation | Configuration and setup | Analyzing code/output | Writing documentation | writing code | running code | Total |
 | ------------- | ---------------------------- | ---------------------------------- | ------------------ | -------------------- | ------------------- | --------------- | --------------- | ----------- | ----- |
-| Ouday Ahmed |  |  |  |  |  |  |  |  |  |
+| Ouday Ahmed | 1h | 1h | 6h | 1h | 5h | 3h | 4h | 2h | 23h |
 | Martin Arenbro |  |  |  |  |  |  |  |  |  |
 | Ali Asbai | 1h | 2h | 5 h | 45 m | 6 h | 4 h | 3 h | 2 h | 24 h |
 | David Ljunggren | 1h | 1h | 8h | 1h | 6h | 5h | 1h | 1h | 24h |
