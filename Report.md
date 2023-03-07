@@ -221,11 +221,13 @@ No major functionality difference.
 
 **Patch:**
 
-_[This patch has been accepted, or at least been considered for acceptance by the project.](https://github.com/pmd/pmd/pull/4412)_
+_[This patch has been accepted by the project.](https://github.com/pmd/pmd/pull/4412)_
 
 https://github.com/AliAsbai/pmd/pull/9/commits
 
 ### Test results
+
+The changed files do not have unit tests. The patch was successfully merged however, which is a proof of passed regression testing.
 
 ## UML class diagram and its description
 
