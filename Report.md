@@ -200,6 +200,16 @@ https://github.com/AliAsbai/pmd/pull/9/commits
 
 The changed files do not have unit tests. The patch was successfully merged however, which is a proof of passed regression testing.
 
+## Final build / Regression testing
+
+**Before changes:**  
+
+![Regression_Testing_Before](https://cdn.discordapp.com/attachments/1074671351123693570/1083019334147903488/image.png "Regression_Testing_Before")
+
+**After changes:**  
+
+![Regression_Testing_After](https://cdn.discordapp.com/attachments/1074671351123693570/1083017679293665340/image.png "Regression_Testing_After")
+
 ## UML class diagram and its description
 
 ![UML Diagram](https://github.com/AliAsbai/pmd/blob/5-write-the-report/uml.png "UML Diagram")
@@ -225,8 +235,6 @@ The rule module is responsible for applying a set of predefined rules to the AST
 Finally, the reporting module is responsible for generating reports on the results of the analysis. PMD supports multiple report formats, including HTML, XML, and CSV.
 
 Since the rule module is one of the core features of the application, our changes had an impact on all other modules of the application. This made it extremely important that we refractored the code in a way that did not change how the rest of the application communicates with the rule module.
-
-Optional (point 2): relation to design pattern(s).
 
 ## Overall experience
 
