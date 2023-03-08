@@ -158,7 +158,7 @@ These are test results for UseStringBufferForStringAppendsTest before/after refa
 
 
 
-To see the test results, you can access it by navigating to the following path in the web browser:
+To see the full test results, you can access it by navigating to the following path in the web browser:
 
 **Before refactoring:**
 	
@@ -169,35 +169,6 @@ To see the test results, you can access it by navigating to the following path i
 	test-results/Test Results - UseStringBufferForStringAppendsTestAfter.html
 
 ## Overview of issue 3
-
-**Title:**  
-Rename rule MethodArgumentCouldBeFinal to FormalParameterCouldBeFinal.
-
-**URL:**  
-https://github.com/pmd/pmd/issues/4287
-
-**Summary in one or two sentences:**  
-Rename the rule class/method to the requested name. Also changed the name of the test class/method for consistency reasons. 
-
-**Scope (functionality and code affected):**  
-No major functionality difference. 
-
-### Requirements for the new feature or requirements affected by functionality being refactored
-
-| ID | Title | Description |
-|---|---|---|
-| 1 | Refactoring | Rename the rule class/method to the requested name. |
-| 2 | Refactoring | Change the name of the test class/method for consistency. |
-| 3 | Regression Testing | The regression tests should pass after modification. |
-
-### Code changes
-
-**Patch:**
-https://github.com/AliAsbai/pmd/pull/12/commits
-
-### Test results
-
-## Overview of issue 4
 
 **Title:**  
 Complete ConstantsInInterface hint to alternative location in enum.
