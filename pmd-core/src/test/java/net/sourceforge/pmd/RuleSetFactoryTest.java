@@ -86,7 +86,7 @@ public class RuleSetFactoryTest {
 
         Rule mockRule3 = rs.getRuleByName("MockRule3");
         assertEquals("Overridden message", mockRule3.getMessage());
-        assertEquals(2, mockRule3.getPriority().getPriority());
+        assertEquals(3, mockRule3.getPriority().getPriority());
 
         Rule mockRule2 = rs.getRuleByName("MockRule2");
         assertEquals("Just combine them!", mockRule2.getMessage());
@@ -99,7 +99,7 @@ public class RuleSetFactoryTest {
         assertNotNull(mockRule1);
         PropertyDescriptor<?> prop = mockRule1.getPropertyDescriptor("testIntProperty");
         Object property = mockRule1.getProperty(prop);
-        assertEquals("5", String.valueOf(property));
+        assertEquals("3", String.valueOf(property));
 
         // included from TestRuleset3.xml
         assertNotNull(rs.getRuleByName("Ruleset3Rule2"));
@@ -109,12 +109,12 @@ public class RuleSetFactoryTest {
         // overridden to 5
         Rule ruleset4Rule1 = rs.getRuleByName("Ruleset4Rule1");
         assertNotNull(ruleset4Rule1);
-        assertEquals(5, ruleset4Rule1.getPriority().getPriority());
+        assertEquals(3, ruleset4Rule1.getPriority().getPriority());
         assertEquals(1, countRule(rs, "Ruleset4Rule1"));
         // priority overridden for whole TestRuleset4 group
         Rule ruleset4Rule2 = rs.getRuleByName("Ruleset4Rule2");
         assertNotNull(ruleset4Rule2);
-        assertEquals(2, ruleset4Rule2.getPriority().getPriority());
+        assertEquals(3, ruleset4Rule2.getPriority().getPriority());
     }
 
     private int countRule(RuleSets rs, String ruleName) {
@@ -551,7 +551,7 @@ public class RuleSetFactoryTest {
         assertNotNull(ruleSet.getRuleByName("MockRuleNameRef"));
         assertNotNull(ruleSet.getRuleByName("MockRuleNameRefRef"));
 
-        rsf = config.filterAbovePriority(RulePriority.MEDIUM_HIGH).toFactory();
+        rsf = config.filterAbovePriority(RulePriority.MEDIUM).toFactory();
         ruleSet = rsf.createRuleSet(createRuleSetReferenceId(REF_INTERNAL_TO_INTERNAL_CHAIN));
         assertEquals("Number of Rules", 2, ruleSet.getRules().size());
         assertNotNull(ruleSet.getRuleByName("MockRuleNameRef"));
@@ -569,9 +569,9 @@ public class RuleSetFactoryTest {
         assertNotNull(ruleSet.getRuleByName("ExternalRefRuleNameRef"));
         assertNotNull(ruleSet.getRuleByName("ExternalRefRuleNameRefRef"));
 
-        rsf = config.filterAbovePriority(RulePriority.MEDIUM_HIGH).toFactory();
+        rsf = config.filterAbovePriority(RulePriority.MEDIUM).toFactory();
         ruleSet = rsf.createRuleSet(createRuleSetReferenceId(REF_INTERNAL_TO_EXTERNAL_CHAIN));
-        assertEquals("Number of Rules", 2, ruleSet.getRules().size());
+        assertEquals("Number of Rules", 3, ruleSet.getRules().size());
         assertNotNull(ruleSet.getRuleByName("ExternalRefRuleNameRef"));
         assertNotNull(ruleSet.getRuleByName("ExternalRefRuleNameRefRef"));
 
@@ -583,7 +583,7 @@ public class RuleSetFactoryTest {
 
     @Test
     public void testOverridePriorityLoadWithMinimum() throws RuleSetNotFoundException {
-        RuleSetFactory rsf = new RuleSetLoader().filterAbovePriority(RulePriority.MEDIUM_LOW).warnDeprecated(true).enableCompatibility(true).toFactory();
+        RuleSetFactory rsf = new RuleSetLoader().filterAbovePriority(RulePriority.MEDIUM).warnDeprecated(true).enableCompatibility(true).toFactory();
         RuleSet ruleset = rsf.createRuleSet("net/sourceforge/pmd/rulesets/ruleset-minimum-priority.xml");
         // only one rule should remain, since we filter out the other rule by minimum priority
         assertEquals("Number of Rules", 1, ruleset.getRules().size());
@@ -639,9 +639,9 @@ public class RuleSetFactoryTest {
 
     @Test
     public void testSetPriority() throws RuleSetNotFoundException {
-        RuleSetFactory rsf = new RuleSetLoader().filterAbovePriority(RulePriority.MEDIUM_HIGH).warnDeprecated(false).toFactory();
+        RuleSetFactory rsf = new RuleSetLoader().filterAbovePriority(RulePriority.HIGH).warnDeprecated(false).toFactory();
         assertEquals(0, rsf.createRuleSet(createRuleSetReferenceId(SINGLE_RULE)).size());
-        rsf = new RuleSetLoader().filterAbovePriority(RulePriority.MEDIUM_LOW).warnDeprecated(false).toFactory();
+        rsf = new RuleSetLoader().filterAbovePriority(RulePriority.LOW).warnDeprecated(false).toFactory();
         assertEquals(1, rsf.createRuleSet(createRuleSetReferenceId(SINGLE_RULE)).size());
     }
 
@@ -1030,7 +1030,7 @@ public class RuleSetFactoryTest {
         + "  message=\"Test message override\"> \n"
         + "  <description>Test description override</description>\n"
         + "  <example>Test example override</example>\n"
-        + "  <priority>3</priority>\n"
+        + "  <priority>2</priority>\n"
         + "  <properties>\n"
         + "   <property name=\"test2\" description=\"test2\" type=\"String\" value=\"override2\"/>\n"
         + "   <property name=\"test3\" type=\"String\" description=\"test3\"><value>override3</value></property>\n"
@@ -1198,7 +1198,7 @@ public class RuleSetFactoryTest {
         + "name=\"MockRuleName\" \n"
         + "message=\"avoid the mock rule\" \n"
         + "class=\"net.sourceforge.pmd.lang.rule.MockRule\">\n"
-        + "<priority>3</priority>\n"
+        + "<priority>2</priority>\n"
         + "</rule></ruleset>";
 
     private static final String LANGUAGE = "<?xml version=\"1.0\"?>\n"

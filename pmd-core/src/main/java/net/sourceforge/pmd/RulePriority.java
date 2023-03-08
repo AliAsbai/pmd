@@ -20,20 +20,10 @@ public enum RulePriority {
     /** High: Change absolutely required. Behavior is critically broken/buggy */
     HIGH(1, "High"),
     /**
-     * Medium to high: Change highly recommended. Behavior is quite likely to be
-     * broken/buggy.
-     */
-    MEDIUM_HIGH(2, "Medium High"),
-    /**
      * Medium: Change recommended. Behavior is confusing, perhaps buggy, and/or
      * against standards/best practices.
      */
     MEDIUM(3, "Medium"),
-    /**
-     * Medium to low: Change optional. Behavior is not likely to be buggy, but
-     * more just flies in the face of standards/style/good taste.
-     */
-    MEDIUM_LOW(4, "Medium Low"),
     /**
      * Low: Change highly optional. Nice to have, such as a consistent naming
      * policy for package/class/fields...
@@ -88,9 +78,11 @@ public enum RulePriority {
      * @return The priority.
      */
     public static RulePriority valueOf(int priority) {
-        try {
-            return RulePriority.values()[priority - 1];
-        } catch (ArrayIndexOutOfBoundsException e) {
+        if (priority == 1) {
+            return HIGH;
+        } else if (priority == 2 || priority == 3) {
+            return MEDIUM;
+        } else {
             return LOW;
         }
     }

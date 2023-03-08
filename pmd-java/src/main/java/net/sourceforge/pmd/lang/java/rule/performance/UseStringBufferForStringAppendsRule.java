@@ -45,7 +45,7 @@ public class UseStringBufferForStringAppendsRule extends AbstractJavaRule {
 
         // Remember how often we the variable has been used
         int usageCounter = 0;
-
+        boolean isViolationReported = false;
         for (NameOccurrence no : node.getUsages()) {
             Node name = no.getLocation();
             ASTStatementExpression statement = name.getFirstParentOfType(ASTStatementExpression.class);
@@ -89,12 +89,12 @@ public class UseStringBufferForStringAppendsRule extends AbstractJavaRule {
                         if (assignmentOperator != null && assignmentOperator.isCompound()) {
                             if (isWithinLoop(name)) {
                                 // always report within a loop
-                                addViolation(data, assignmentOperator);
+                                isViolationReported = true;
                             } else {
                                 usageCounter++;
                                 if (usageCounter > 1) {
                                     // only report, if it is not the first time
-                                    addViolation(data, assignmentOperator);
+                                    isViolationReported = true;
                                 }
                             }
                         }
@@ -102,21 +102,25 @@ public class UseStringBufferForStringAppendsRule extends AbstractJavaRule {
                         if (assignmentOperator != null && !assignmentOperator.isCompound()) {
                             if (isWithinLoop(name)) {
                                 // always report within a loop
-                                addViolation(data, assignmentOperator);
+                                isViolationReported = true;
                             } else {
                                 usageCounter++;
                                 if (usageCounter > 1) {
                                     // only report, if it is not the first time
-                                    addViolation(data, assignmentOperator);
+                                    isViolationReported = true;
                                 }
                             }
                         } else if (assignmentOperator != null && assignmentOperator.isCompound()
                                 && usageCounter >= 1) {
-                            addViolation(data, assignmentOperator);
+                            isViolationReported = true;
                         }
                     }
                 }
             }
+        }
+        // only report on variable declaration
+        if (isViolationReported) {
+            addViolation(data, node.getNameDeclaration().getNode());
         }
         return data;
     }

@@ -7,7 +7,7 @@
     <test-code>
         <description>failure case</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>7</expected-linenumbers>
+        <expected-linenumbers>4</expected-linenumbers>
         <code><![CDATA[
 package xxx;
 public class Foo {
@@ -48,7 +48,7 @@ public class Foo {
     <test-code>
         <description>compound append, should only report 1 failure</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>5</expected-linenumbers>
+        <expected-linenumbers>3</expected-linenumbers>
         <code><![CDATA[
 public class Foo {
     public void bar() {
@@ -63,7 +63,7 @@ public class Foo {
     <test-code>
         <description>failure case, constructor</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>6</expected-linenumbers>
+        <expected-linenumbers>3</expected-linenumbers>
         <code><![CDATA[
 public class Foo {
     public Foo() {
@@ -79,7 +79,7 @@ public class Foo {
     <test-code>
         <description>static failure case</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>6</expected-linenumbers>
+        <expected-linenumbers>3</expected-linenumbers>
         <code><![CDATA[
 public class Foo {
     static {
@@ -94,8 +94,8 @@ public class Foo {
 
     <test-code>
         <description>reference self inside for loop</description>
-        <expected-problems>2</expected-problems>
-        <expected-linenumbers>5,6</expected-linenumbers>
+        <expected-problems>1</expected-problems>
+        <expected-linenumbers>3</expected-linenumbers>
         <code><![CDATA[
 public class Foo {
     private void bar() {
@@ -186,8 +186,8 @@ public class Foo {
 
     <test-code>
         <description>violation: concat to String in for/while loop</description>
-        <expected-problems>5</expected-problems>
-        <expected-linenumbers>9,13,20,22,29</expected-linenumbers>
+        <expected-problems>3</expected-problems>
+        <expected-linenumbers>6,17,26</expected-linenumbers>
         <code><![CDATA[
 import java.util.*;
 
@@ -325,8 +325,8 @@ public class ConcatInLoop {
 
     <test-code>
         <description>violation: various concats in loop</description>
-        <expected-problems>5</expected-problems>
-        <expected-linenumbers>9,11,13,14,15</expected-linenumbers>
+        <expected-problems>1</expected-problems>
+        <expected-linenumbers>5</expected-linenumbers>
         <code><![CDATA[
 import java.util.*;
 
@@ -413,7 +413,7 @@ public class ConcatInLoop {
     <test-code>
         <description>violation: concat to String in do-loop</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>10</expected-linenumbers>
+        <expected-linenumbers>6</expected-linenumbers>
         <code><![CDATA[
 import java.util.*;
 
@@ -434,7 +434,7 @@ public class ConcatInLoop {
     <test-code>
         <description>violation: concat to String field in loop</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>10</expected-linenumbers>
+        <expected-linenumbers>5</expected-linenumbers>
         <code><![CDATA[
 import java.util.*;
 
@@ -541,7 +541,7 @@ public class UseStringBufferForStringAppendsFP {
     <test-code>
         <description>Test new rule example</description>
         <expected-problems>1</expected-problems>
-        <expected-linenumbers>6</expected-linenumbers>
+        <expected-linenumbers>3</expected-linenumbers>
         <code><![CDATA[
             public class Foo {
                 String inefficientConcatenation() {
@@ -566,6 +566,25 @@ public class UseStringBufferForStringAppendsFP {
                     return "a" + i;
                 }
             }
+        ]]></code>
+    </test-code>
+
+    <test-code>
+        <description>reference self inside for loop and outside</description>
+        <expected-problems>1</expected-problems>
+        <expected-linenumbers>3</expected-linenumbers>
+        <code><![CDATA[
+public class Foo {
+    private void bar() {
+        String result = "";
+        for (int i = 0; i < 10; i++) {
+            result = result + i;
+            result += i;
+        }
+        result = result + i;
+        result = result + i;
+    }
+}
         ]]></code>
     </test-code>
 </test-data>

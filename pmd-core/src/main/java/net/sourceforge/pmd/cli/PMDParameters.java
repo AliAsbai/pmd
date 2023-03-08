@@ -111,7 +111,7 @@ public class PMDParameters {
 
     @Parameter(names = { "--minimum-priority", "-minimumpriority", "-min" },
             description = "Rule priority threshold; rules with lower priority than configured here won't be used. "
-                    + "Valid values are integers between 1 and 5 (inclusive), with 5 being the lowest priority.",
+                    + "Valid values are integers between 1 and 5 (inclusive), with 1 being the highest, 2 and 3 being medium and the rest are the lowest priority.",
             validateValueWith = RulePriorityValidator.class)
     private int minimumPriority = RulePriority.LOW.getPriority();
 
